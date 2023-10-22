@@ -1,0 +1,10 @@
+---
+- name: Install AWS CLI via Ansible
+  hosts: test_env
+  become: yes 
+
+  tasks:
+    - name: Install AWS CLI package
+      ansible.builtin.apt:
+        name: awscli
+        state: present
